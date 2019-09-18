@@ -53,10 +53,24 @@ nav {
     display: flex;
 }
 
+.chef,
+.hairstyle {
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+}
+
 .hero img {
     height: 380px;
     transition: transform 0.3s ease-out;
     cursor: pointer;
+}
+
+.hero a {
+    display: flex;
 }
 
 .model-right {
@@ -238,4 +252,51 @@ nav {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
+    .profile {
+        padding-top: 30px;
+        text-align: center;
+    }
+}
+
+.navOpen {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 50vh;
+    background: white;
+    z-index: 1;
+    color: black;
+    display: grid;
+    grid-template-columns: 5% 1fr 1fr 5%;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    transform: translateY(-100%)
+}
+
+.contact {
+    grid-column: 2/3;
+}
+
+.navOpen h3 {
+    font-size: 28px;
+    padding-bottom: 40px;
+}
+
+.navOpen p {
+    font-size: 18px;
+}
+
+.social-links img {
+    padding: 0px 20px;
+}
+
+.logo,
+.menu {
+    z-index: 2;
+}
+
+.menu {
+    cursor: pointer;
 }
